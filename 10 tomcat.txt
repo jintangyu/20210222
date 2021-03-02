@@ -1,0 +1,31 @@
+tomcat是什么？
+	web服务器，中间件
+
+企业为什么开发java的web项目时喜欢用tomcat？
+	小巧，性能好，免费，开源，和各种其他项目整个很方便
+
+
+1、安装
+	1、上传上对应的tomcat的软件包
+	2、tar zxvf apache-tomcat....tar.gz     解压缩
+	3、cp apache-tomcat.... /usr/java       复制
+	4、cd /usr/java/apache-tomcat.../bin    目录下
+	5、./startup.sh                         运行
+	6、service iptables stop                关闭防火墙
+
+2、测试
+	打开chrome，输入http://linux的ip:8080
+
+
+3、学会看tomcat的日志
+	1、重新打开一个putty，进入tomcat的logs目录:cd /usr/java/apache-tomcat.../logs
+	2、tail -f catalina.out，即可打开日志
+	3、在另外一个putty中，不断的进行开或关tomcat，监控日志文件，会发现不断的在实时打印日志内容
+
+4、学习tomcat的重要目录
+	bin：开关tomcat的脚本目录
+	logs：日志目录
+	conf：配置文件目录  server.xml中就有8080 （67行附近）
+	webapps：应用程序存放目录
+
+

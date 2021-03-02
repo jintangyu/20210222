@@ -1,0 +1,32 @@
+rpm:rpm（英文全拼：redhat package manager） 原本是 Red Hat Linux 发行版专门用来管理 Linux 各项套件的程序，由于它遵循 GPL 规则且功能强大方便，因而广受欢迎。逐渐受到其他发行版的采用。RPM 套件管理方式的出现，让 Linux 易于安装，升级，间接提升了 Linux 的适用度。
+
+
+Red Hat Linux 发行版:
+	linux是内核开源，因为有这个内核，全世界在这个内核上不断的进行包装，其中red hat
+	cenos因为是redhat的一个社区版，因此沿用了redhat的包管理规则，也就是采用rpm来管理
+	注意：全世界的linux发行版是否都遵循rpm包管理？ no
+
+GPL：通用公共许可证
+	注意理解他的含义！
+
+逐渐受到其他发行版的采用：centos、fedora、....
+
+rpm：可以最最简单的理解成是windows上的exe程序（简单理解）
+
+
+1、学习rpm的安装
+	1、jdk=jvm+jre
+		Hello.java-----Hello.class 编译 jvm
+		运行Hello.class            运行 jre
+	2、命令
+		rpm -ivh 包名
+	3、我们在装mysql时，发现rpm包有一个非常恶心的事件：包依赖
+		包依赖：先得安装上A才能安装B，不能直接安装B，会提示有error，提示为：failed dependencies
+
+
+2、其他相关的rpm操作
+	1、显示包的相关信息：rpm -qi xxx.rpm
+	2、显示安装后的行为：rpm -ql 包
+	3、卸载：rpm -e xxx
+	4、查看是否安装了某个包：rpm -qa | grep mysql
+

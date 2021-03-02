@@ -1,0 +1,39 @@
+源码安装：
+1、下载（wget）到对应的.tar.gz包
+2、解压 tar zxvf xxx.tar.gz
+3、cd xxxx
+4、./configure
+	这个./configure后面可以跟很多的参数，如：安装路径，日志路径等。也就是说你可以完全自定义很多东西
+5、make  编译
+	编译需要各种编译器的支持，因此会经历一个痛苦，但这个痛苦过了就其他全部不用管了
+6、make install 安装
+
+
+案例：nginx
+	周末完全对nginx的理解
+		代理、正向代理、反向代理
+		微服务架构（spring could）
+		负载均衡、动静分离
+
+安装步骤：
+	1、cd /usr/local
+	2、mkdir nginx
+	3、wget https://nginx.org/download/nginx-1.9.9.tar.gz
+		wget 是一个从网络上自动下载文件的自由工具
+	4、tar zxvf nginx-1.9.9.tar.gz
+	5、cd nginx-1.9.9
+	6、./configure --prefix=/usr/local/nginx/ --with-http_ssl_module
+		1、生成Makefile文件
+		2、./configure --help可以查看帮助
+	7、make
+		1、各种no，编译不通过
+		2、yum -y install gcc gcc-c++ autoconf automake
+		3、yum -y install zlib zlib-devel openssl openssl-devel pcre pcre-devel
+		4、make，其实还不通过
+		5、要删除Makefile文件
+		6、重新./configure操作，然后再make
+	8、make install
+
+测试：
+	1、关闭防火墙：service iptables stop
+	2、打开浏览器,http://linux的ip

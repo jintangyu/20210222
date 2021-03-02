@@ -1,0 +1,21 @@
+最基本的命令：
+1、pwd：查看我当前所在的位置
+2、ls：展示目录中有哪些内容
+	ls -l、ls -a
+	有个问题产生，还有哪些参数呢？？？linux是一个男人的操作系统，不懂问男人
+	man 命令
+		q来退出（quit）
+  	ll更常用，他是ls -l的简写（别名） alias
+3、取别名：alias cai='ls -l' 
+     撤销：unalias cai
+4、切换目录：cd，尤其你必须掌握相对路径和绝对路径
+	cd 目录
+	玩这个，要问自己，我在哪？我想去哪？
+	我在哪？pwd
+	我想去哪？如果想去的位置就是我下面的目录，就直接 cd 目录名
+		                不在我下面，就cd /敲完整目录路径
+	[root@localhost tmp]#
+		/tmp              /tmp/caichang/baobao
+			    #cd caichang/baobao(就可以了，相对路径)
+                            #cd /tmp/caichang/baobao(也可以，绝对路径)
+5、clear：清屏

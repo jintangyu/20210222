@@ -1,0 +1,103 @@
+linux是个文件系统，我们要学习文件、文件夹的操作
+做实验都在/tmp,因此先执行：cd /tmp,来到/tmp目录
+为了能够很好的记住这些命令，你做的实验最好结合你的理解，让他变得有趣
+
+
+新建、删除、重命名、剪切、复制、查找
+
+新建：
+	文件夹 mkdir make directory
+		mkdir cai
+		mkdir cai chang bao zi
+		mkdir -p bao/zi/fengjie/hehe
+	文件   touch
+		touch cc
+		touch cc cc2 cc3
+
+删除：
+	文件夹 rmdir  remove directory
+		rmdir cai
+		rmdir cai chang bao
+		【注意】很遗憾，rmdir只能删除空文件夹，这个命令用得特别少
+	文件    rm -rf 文件/文件夹
+		【注意】请看清楚文件或文件夹的名称，否则只能从删库到跑路 :)
+
+
+重命名、剪切：
+	文件/文件夹 mv  move
+	如果是同层，表示重命名，如果是不同层，表示剪切
+	mv 原目录 现目录
+		 mv caichang fengjie（同层） 重命名
+		 mv fengjie/ /var/www/html（不同层） 剪切
+
+复制：
+	文件/文件夹 cp
+	如果是文件夹，要带-r 参数
+	cp [-r] 原目录 现目录
+		
+查找：
+	文件/文件夹 find
+	find 目录 -name '文件'
+	【注意】工作中，我们最常见的是：find / -name '*文件名*'
+	        linux的find比windows强大太多太多，他有一堆的技巧，可以百度找出你喜欢的
+
+【注意】
+	只要你写对路径就能做你要的一切且不局限于当前位置（好处：不用来回切路径）
+
+
+
+为了做这个实验，我选取了一个文件：cp /etc/httpd/conf/httpd.conf /tmp
+查看文件的内容：
+	静态、动态
+		静态：cat、more、less、heed、tac
+			cat：小点的文件，最好是一屏就能展示完
+			more：慢慢看，不能向上看  q：退出
+		 	less：上下随便看
+			下面的不常用：
+			head -n 10 httpd.conf
+		动态：
+			tail -f 动态文件
+			Ctrl+c  退出
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

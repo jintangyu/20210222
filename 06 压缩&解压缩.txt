@@ -1,0 +1,32 @@
+windows:rar、zip   windows是边打包边压缩
+	1、linux是不支持rar格式
+	2、zip：支持
+		压缩：zip -r 名 文件/文件夹
+		解压缩：unzip 名    （这个多一点，同事给我的有可能是zip包，我要解压开后才能看里面的内容）
+ 
+linux：tar 打包
+	1、压缩：
+		tar cvf 名 文件/文件夹
+	2、解压缩：
+		tar xvf 名
+	3、查看包里内容
+		tar -tf 压缩包名
+	4、追加东西到压缩包中
+		tar -rf 名 文件/文件夹
+	5、删除压缩包中的内容
+		tar --delete -f 名 文件/文件夹
+	gzip 压缩
+	1、压缩（大前提：已经是个tar包）
+		gzip 包.tar
+	2、解压缩 (解压完成后是个.tar包)
+		gunzip 包.tar.gz
+
+	【疑问】我不想分2步做，能不能实现边打包边压缩
+
+	1、压缩：
+		tar zcvf 名.tar.gz 文件/文件夹
+	2、解压缩：
+		tar zxvf 名.tar.gz
+
+【特别提醒】
+	linux是不区分后缀的，但为了方便使用，写一个后缀而已
